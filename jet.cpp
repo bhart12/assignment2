@@ -2,7 +2,7 @@
 // Created by Bryce Hart on 10/4/19.
 //
 
-#include "Jet.h"
+#include "jet.h"
 
 Jet::Jet() {
     myEngineSize = "unknown";
@@ -10,17 +10,22 @@ Jet::Jet() {
     setModel("VTx");
 }
 
-Jet::Jet(string brand, string model, string fuelType, string engineSize) {
+Jet::Jet(string brand, string model, string fuelType, string engineSize, int numOfEngines) {
     setBrand(brand);
     setModel(model);
     setFuelType(fuelType);
     setEngineSize(engineSize);
+    numberOfEngines = numOfEngines;
 }
 
 Jet::~Jet() = default;
 
 string Jet::getEngineSize() {
     return myEngineSize;
+}
+
+int Jet::getNumOfEngines() {
+    return numberOfEngines;
 }
 
 void Jet::setEngineSize(string engineSize) {
@@ -33,10 +38,10 @@ void Jet::setEngineSize(string engineSize) {
 
 }
 
-double Jet::mileageEstimate(double time) {
+double Jet::mileageEstimate(double mileTime) {
 	srand(time(0));
 	
-    double mileage = ((rand() % 60) + 40) * time;
+    double mileage = ((rand() % 60) + 40) * mileTime;
     if (fuelType == "Rocket" && numberOfEngines > 2) {
         mileage += mileage * 0.055;
     }
@@ -45,5 +50,7 @@ double Jet::mileageEstimate(double time) {
 
 string Jet::toString() {
     return "-> Jet\n" + PoweredVehicle::toString() + "\n\tEngine Size: " +
-           getEngineSize();
+           getEngineSize() + 
+		"\n\tNumber of Engines: " +
+		to_string(getNumOfEngines());
 }

@@ -7,21 +7,23 @@
 
 #include "PoweredVehicle.h"
 #include <time.h> 
+#include <string>
 
 class Jet : public PoweredVehicle {
 
 private:
     string myEngineSize;
-	int numberOfEngines = 1;
+	int numberOfEngines;
 
 public:
     Jet();
 
     explicit Jet(string brand, string model, string fuelType,
-                 string engineSize);
+                 string engineSize, int numberOfEngines = 1);
 
     virtual ~Jet();
     string getEngineSize();
+    int getNumOfEngines();
     void setEngineSize(string engineSize);
     virtual double mileageEstimate(double time);
     virtual string toString();
