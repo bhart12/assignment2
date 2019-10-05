@@ -26,3 +26,11 @@ E.H Inheritance is when an object or class is based upon another class or object
 	Polymorphism is the ability to redefine a function for a derived class
 	Encapsulation is wrapping variables and functions together in a single unit
 
+E.I Dictator and Lieutinants workflow goes through one main source, that is they pull all their resources from one source
+	Integration manager workflow has everyone with their own separate source.
+
+E.J A large group of 100 developers would not have to worry as much about conflicts between what people were working on, because they would be getting and pushing their code to, ultimatley, a single source.
+
+5. This example is using both encapsulation and polymorphism.
+	The project shows polymorphism because there are implementing classes that are changing certain functions for their own, in order to suite their new class and needs
+	The project shows encapsulation because all the new classes that were created were separated neatly by different types of vehicles.
