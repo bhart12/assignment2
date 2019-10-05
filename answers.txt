@@ -1,0 +1,36 @@
+E.A. Fatal: AggregateException encountered.
+Username for 'https://github.com': bhart12
+Password for 'https://bhart12@github.com':
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 374 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/bhart12/assignment2.git
+f4975e5..8d0cb70  master -> master
+
+E.B. There have been 8 commits so far. Command "git shortlog" was used to find this
+
+E.C. The file was last modified on 2019-09-25 18:13:30. Command "git log -1 --pretty="format:%ci" .gitignore" was used for this
+
+E.D. Branches are used in Git repos because 1) if multiple people are working on different features and don't want conflicting code 2) You are working on something you are worried might mess up other code
+
+E.E. git log shows all changes to repo while git status shows all changes that will be added in the next git push
+
+E.F git log --follow -- Vehicle.h
+
+E.G git log --all-match --grep=file
+
+E.H Inheritance is when an object or class is based upon another class or object, retaining some of its qualities.
+	Polymorphism is the ability to redefine a function for a derived class
+	Encapsulation is wrapping variables and functions together in a single unit
+
+E.I Dictator and Lieutinants workflow goes through one main source, that is they pull all their resources from one source
+	Integration manager workflow has everyone with their own separate source.
+
+E.J A large group of 100 developers would not have to worry as much about conflicts between what people were working on, because they would be getting and pushing their code to, ultimatley, a single source.
+
+5. This example is using both encapsulation and polymorphism.
+	The project shows polymorphism because there are implementing classes that are changing certain functions for their own, in order to suite their new class and needs
+	The project shows encapsulation because all the new classes that were created were separated neatly by different types of vehicles.
